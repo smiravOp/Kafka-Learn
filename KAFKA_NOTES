@@ -2,22 +2,22 @@
 
 Step 1: Start zookeper server first
 
-.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+C:\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 
 Step 2: Start kafka server second:
 
-.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+C:\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 
 Step 3: Create Topic in Kafka cluster
 
-.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+C:\kafka>.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
 
 Step 4: Create Producer which will produce event which will ask for events to produce followed by running this command
-.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+C:\kafka>.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
 >Hello Wolrd
 >Kafka topic event
 >demo1
 >demo2
 
 Step 5: Read the events from kafka topic
-.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+C:\kafka>.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
